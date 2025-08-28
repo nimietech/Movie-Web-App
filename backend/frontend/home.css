@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(assets/header-image.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8px;
+    position: relative; /*everything you put inside there will remain there, cant appear anywhere else*/
+}
+
+.header-nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.header-nav .logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+
+.option #lang{
+    background: rgba(0, 0, 0, 0.849);
+    color: #fff;
+    padding:7px 5px;
+    margin-right: 15px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+  
+.header-nav .option .btn{
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #fff;
+    padding:7px 20px;
+    text-decoration: none;
+    font-size: small;
+    border-radius: 4px;
+}
+  
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+   
+.header-content h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+  
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+   
+.sign-up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+   
+.sign-up #input{
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.sign-up button{
+    background-color: #db0001;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding:15px 30px;
+}
+
+.sign-up button a{
+  text-decoration: none;              
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;     
+}
+  
+/* Features section start */
+
+.features{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 12%;
+    font-size: 20px;
+}
+
+.features .features-list {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+ 
+.features .features-list h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.features .features-img{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+
+}
+
+.features .features-img img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+/* Features section stop */
+
+/* FAQ section start */
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px; 
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion{
+    margin: 60px auto;
+    max-width: 750px;
+
+}
+
+.accordion li{
+    list-style: none;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size:34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+.accordion li input[type="radio"]{
+    display: none;
+}
+
+.accordion li .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion li input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+
+.accordion li input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.faq .faq-info p{
+    font-size: 13px;
+}
+
+.faq .faq-info .sign-up{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+/* FAQ section stop */
+
+/* Footer Section Start */
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color:#777;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    
+}
+
+.footer .col{
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    display: flex;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer .option #lang{
+    padding: 10px 5px;
+    border-radius: 3px;
+}
+
+.copy-right{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Foooter Section Stop */
+
+/* Media Query start */
+@media(max-width: 600px){
+
+    .header{
+        height: 100vh;
+    }
+
+    .header-nav .logo{
+        width: 100px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .sign-up button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    
+    .features .features-list{
+        flex-basis: 100%;
+    }
+
+    .features .features-img{
+        flex-basis: 100%;
+    }
+
+    .features .features-list h2{
+        font-size: 30px;
+    }
+
+    .features .features-list p{
+        font-size: 15px;
+    }
+
+    .features:nth-child(2), .features:nth-child(4){
+        flex-direction: column-reverse;
+    }
+
+    .features{
+        padding: 50px 10px;
+    }
+
+    .faq h2{
+        font-size: 20px;
+    }
+
+    .accordion li .content{
+        font-size: 14px;
+    }
+
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after{
+        font-size: 22px;
+    }
+
+    .footer .col a{
+        font-size: 10px;
+        margin-bottom: 13px;
+    }
+
+}
+/* Media Query stop */
