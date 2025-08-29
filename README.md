@@ -1,4 +1,4 @@
-# 🎬 Netflix Clone  
+# 🎬 A Netflix Clone  
 
 A fully functional **Netflix Clone** built using **HTML, CSS, JavaScript, and backend technologies**.  
 This project mimics a bit of the design and functionality of the Netflix platform.  
